@@ -11,7 +11,7 @@ import Foundation
 
 extension Task {
     
-    public class func runTask(launchPath:String, arguments:[String]?, silenceOutput:Bool = false) -> (output:String?, error:String?, exitCode:Int32) {
+    public class func run(launchPath:String, arguments:[String]?, silenceOutput:Bool = false) -> (output:String?, error:String?, exitCode:Int32) {
         let task = Task()
         task.launchPath = launchPath
         if let launchArguments = arguments {
