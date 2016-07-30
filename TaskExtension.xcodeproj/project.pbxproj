@@ -1,0 +1,236 @@
+// !$*UTF8*$!
+{
+    archiveVersion = 1;
+    classes = {};
+    objectVersion = 46;
+    rootObject = __RootObject_;
+    objects = {
+        __RootObject_ = {
+            isa = PBXProject;
+            attributes = {LastUpgradeCheck = 9999;};
+            buildConfigurationList = ___RootConfs_;
+            compatibilityVersion = 'Xcode 3.2';
+            developmentRegion = English;
+            hasScannedForEncodings = 0;
+            knownRegions = (en);
+            mainGroup = ___RootGroup_;
+            productRefGroup = ____Products_;
+            projectDirPath = '';
+            projectRoot = '';
+            targets = (______Target_TaskExtension, ______Target_TaskExtensionTestSuite);
+        };
+        '__PBXFileRef_Package.swift' = {
+            isa = PBXFileReference;
+            lastKnownFileType = sourcecode.swift;
+            name = 'Package.swift';
+            path = 'Package.swift';
+            sourceTree = '<group>';
+        };
+        ___RootGroup_ = {
+            isa = PBXGroup;
+            children = ('__PBXFileRef_Package.swift', _____Configs_, _____Sources_, Dependencies_, _______Tests_, ____Products_);
+            sourceTree = '<group>';
+        };
+        __PBXFileRef_TaskExtension_Info.plist = {
+            isa = PBXFileReference;
+            lastKnownFileType = text.plist.xml;
+            name = 'TaskExtension_Info.plist';
+            path = 'TaskExtension.xcodeproj/TaskExtension_Info.plist';
+            sourceTree = SOURCE_ROOT;
+        };
+        _______Group_TaskExtension = {
+            isa = PBXGroup;
+            name = TaskExtension;
+            path = 'Sources';
+            sourceTree = '<group>';
+            children = ('__PBXFileRef_Sources/TaskExtension.swift', __PBXFileRef_TaskExtension_Info.plist);
+        };
+        '__PBXFileRef_Sources/TaskExtension.swift' = {
+            isa = PBXFileReference;
+            lastKnownFileType = sourcecode.swift;
+            name = 'TaskExtension.swift';
+            sourceTree = '<group>';
+        };
+        ______Target_TaskExtension = {
+            isa = PBXNativeTarget;
+            buildConfigurationList = _______Confs_TaskExtension;
+            buildPhases = (CompilePhase_TaskExtension, ___LinkPhase_TaskExtension);
+            buildRules = ();
+            dependencies = ();
+            name = TaskExtension;
+            productName = TaskExtension;
+            productReference = _____Product_TaskExtension;
+            productType = 'com.apple.product-type.framework';
+        };
+        _____Product_TaskExtension = {
+            isa = PBXFileReference;
+            explicitFileType = 'wrapper.framework';
+            path = 'TaskExtension.framework';
+            sourceTree = BUILT_PRODUCTS_DIR;
+        };
+        CompilePhase_TaskExtension = {
+            isa = PBXSourcesBuildPhase;
+            files = ('__src_cc_ref_Sources/TaskExtension.swift');
+            runOnlyForDeploymentPostprocessing = 0;
+        };
+        '__src_cc_ref_Sources/TaskExtension.swift' = {
+            isa = PBXBuildFile;
+            fileRef = '__PBXFileRef_Sources/TaskExtension.swift';
+        };
+        ___LinkPhase_TaskExtension = {
+            isa = PBXFrameworksBuildPhase;
+            files = ();
+            runOnlyForDeploymentPostprocessing = 0;
+        };
+        _______Confs_TaskExtension = {
+            isa = XCConfigurationList;
+            buildConfigurations = (___DebugConf_TaskExtension, _ReleaseConf_TaskExtension);
+            defaultConfigurationIsVisible = 0;
+            defaultConfigurationName = Debug;
+        };
+        ___DebugConf_TaskExtension = {
+            isa = XCBuildConfiguration;
+            buildSettings = { LD_RUNPATH_SEARCH_PATHS = '$(TOOLCHAIN_DIR)/usr/lib/swift/macosx'; PRODUCT_MODULE_NAME = '$(TARGET_NAME:c99extidentifier)'; ENABLE_TESTABILITY = 'YES'; OTHER_SWIFT_FLAGS = '$(inherited)'; INFOPLIST_FILE = 'TaskExtension.xcodeproj/TaskExtension_Info.plist'; FRAMEWORK_SEARCH_PATHS = '$(PLATFORM_DIR)/Developer/Library/Frameworks'; SWIFT_OPTIMIZATION_LEVEL = '-Onone'; OTHER_LDFLAGS = '$(inherited)'; PRODUCT_NAME = '$(TARGET_NAME:c99extidentifier)'; };
+            name = Debug;
+        };
+        _ReleaseConf_TaskExtension = {
+            isa = XCBuildConfiguration;
+            buildSettings = { LD_RUNPATH_SEARCH_PATHS = '$(TOOLCHAIN_DIR)/usr/lib/swift/macosx'; PRODUCT_MODULE_NAME = '$(TARGET_NAME:c99extidentifier)'; ENABLE_TESTABILITY = 'YES'; OTHER_SWIFT_FLAGS = '$(inherited)'; INFOPLIST_FILE = 'TaskExtension.xcodeproj/TaskExtension_Info.plist'; FRAMEWORK_SEARCH_PATHS = '$(PLATFORM_DIR)/Developer/Library/Frameworks'; OTHER_LDFLAGS = '$(inherited)'; PRODUCT_NAME = '$(TARGET_NAME:c99extidentifier)'; };
+            name = Release;
+        };
+        __Dependency_TaskExtension = {
+            isa = PBXTargetDependency;
+            target = ______Target_TaskExtension;
+        };
+        __PBXFileRef_TaskExtensionTestSuite_Info.plist = {
+            isa = PBXFileReference;
+            lastKnownFileType = text.plist.xml;
+            name = 'TaskExtensionTestSuite_Info.plist';
+            path = 'TaskExtension.xcodeproj/TaskExtensionTestSuite_Info.plist';
+            sourceTree = SOURCE_ROOT;
+        };
+        _______Group_TaskExtensionTestSuite = {
+            isa = PBXGroup;
+            name = TaskExtensionTestSuite;
+            path = 'Tests/TaskExtension';
+            sourceTree = '<group>';
+            children = ('__PBXFileRef_Tests/TaskExtension/TaskExtensionTests.swift', __PBXFileRef_TaskExtensionTestSuite_Info.plist);
+        };
+        '__PBXFileRef_Tests/TaskExtension/TaskExtensionTests.swift' = {
+            isa = PBXFileReference;
+            lastKnownFileType = sourcecode.swift;
+            name = 'TaskExtensionTests.swift';
+            sourceTree = '<group>';
+        };
+        ______Target_TaskExtensionTestSuite = {
+            isa = PBXNativeTarget;
+            buildConfigurationList = _______Confs_TaskExtensionTestSuite;
+            buildPhases = (CompilePhase_TaskExtensionTestSuite, ___LinkPhase_TaskExtensionTestSuite);
+            buildRules = ();
+            dependencies = (__Dependency_TaskExtension);
+            name = TaskExtensionTestSuite;
+            productName = TaskExtensionTestSuite;
+            productReference = _____Product_TaskExtensionTestSuite;
+            productType = 'com.apple.product-type.bundle.unit-test';
+        };
+        _____Product_TaskExtensionTestSuite = {
+            isa = PBXFileReference;
+            explicitFileType = 'compiled.mach-o.wrapper.cfbundle';
+            path = 'TaskExtensionTestSuite.xctest';
+            sourceTree = BUILT_PRODUCTS_DIR;
+        };
+        CompilePhase_TaskExtensionTestSuite = {
+            isa = PBXSourcesBuildPhase;
+            files = ('__src_cc_ref_Tests/TaskExtension/TaskExtensionTests.swift');
+            runOnlyForDeploymentPostprocessing = 0;
+        };
+        '__src_cc_ref_Tests/TaskExtension/TaskExtensionTests.swift' = {
+            isa = PBXBuildFile;
+            fileRef = '__PBXFileRef_Tests/TaskExtension/TaskExtensionTests.swift';
+        };
+        ___LinkPhase_TaskExtensionTestSuite = {
+            isa = PBXFrameworksBuildPhase;
+            files = (_LinkFileRef_TaskExtension_via_TaskExtensionTestSuite);
+            runOnlyForDeploymentPostprocessing = 0;
+        };
+        _LinkFileRef_TaskExtension_via_TaskExtensionTestSuite = {
+            isa = PBXBuildFile;
+            fileRef = _____Product_TaskExtension;
+        };
+        _______Confs_TaskExtensionTestSuite = {
+            isa = XCConfigurationList;
+            buildConfigurations = (___DebugConf_TaskExtensionTestSuite, _ReleaseConf_TaskExtensionTestSuite);
+            defaultConfigurationIsVisible = 0;
+            defaultConfigurationName = Debug;
+        };
+        ___DebugConf_TaskExtensionTestSuite = {
+            isa = XCBuildConfiguration;
+            buildSettings = { LD_RUNPATH_SEARCH_PATHS = '@loader_path/../Frameworks'; FRAMEWORK_SEARCH_PATHS = '$(PLATFORM_DIR)/Developer/Library/Frameworks'; OTHER_SWIFT_FLAGS = '$(inherited)'; INFOPLIST_FILE = 'TaskExtension.xcodeproj/TaskExtensionTestSuite_Info.plist'; SWIFT_OPTIMIZATION_LEVEL = '-Onone'; EMBEDDED_CONTENT_CONTAINS_SWIFT = 'YES'; OTHER_LDFLAGS = '$(inherited)'; };
+            name = Debug;
+        };
+        _ReleaseConf_TaskExtensionTestSuite = {
+            isa = XCBuildConfiguration;
+            buildSettings = { LD_RUNPATH_SEARCH_PATHS = '@loader_path/../Frameworks'; FRAMEWORK_SEARCH_PATHS = '$(PLATFORM_DIR)/Developer/Library/Frameworks'; EMBEDDED_CONTENT_CONTAINS_SWIFT = 'YES'; OTHER_LDFLAGS = '$(inherited)'; INFOPLIST_FILE = 'TaskExtension.xcodeproj/TaskExtensionTestSuite_Info.plist'; OTHER_SWIFT_FLAGS = '$(inherited)'; };
+            name = Release;
+        };
+        __Dependency_TaskExtensionTestSuite = {
+            isa = PBXTargetDependency;
+            target = ______Target_TaskExtensionTestSuite;
+        };
+        '__PBXFileRef_TaskExtension.xcodeproj/Configs/Project.xcconfig' = {
+            isa = PBXFileReference;
+            lastKnownFileType = text.xcconfig;
+            name = 'Project.xcconfig';
+            path = 'TaskExtension.xcodeproj/Configs/Project.xcconfig';
+            sourceTree = '<group>';
+        };
+        _____Configs_ = {
+            isa = PBXGroup;
+            children = ('__PBXFileRef_TaskExtension.xcodeproj/Configs/Project.xcconfig');
+            name = Configs;
+            sourceTree = '<group>';
+        };
+        _____Sources_ = {
+            isa = PBXGroup;
+            children = (_______Group_TaskExtension);
+            name = Sources;
+            sourceTree = '<group>';
+        };
+        _______Tests_ = {
+            isa = PBXGroup;
+            children = (_______Group_TaskExtensionTestSuite);
+            name = Tests;
+            sourceTree = '<group>';
+        };
+       TestProducts_ = {
+            isa = PBXGroup;
+            children = (_____Product_TaskExtensionTestSuite);
+            name = Tests;
+            sourceTree = '<group>';
+        };
+        ____Products_ = {
+            isa = PBXGroup;
+            children = (TestProducts_, _____Product_TaskExtension);
+            name = Products;
+            sourceTree = '<group>';
+        };
+        _______Debug_ = {
+            isa = XCBuildConfiguration;
+            baseConfigurationReference = '__PBXFileRef_TaskExtension.xcodeproj/Configs/Project.xcconfig';
+            buildSettings = {};
+            name = Debug;
+        };
+        _____Release_ = {
+            isa = XCBuildConfiguration;
+            baseConfigurationReference = '__PBXFileRef_TaskExtension.xcodeproj/Configs/Project.xcconfig';
+            buildSettings = {};
+            name = Release;
+        };
+        ___RootConfs_ = {
+            isa = XCConfigurationList;
+            buildConfigurations = (_______Debug_, _____Release_);
+            defaultConfigurationIsVisible = 0;
+            defaultConfigurationName = Debug;
+        };
+    };
+}
