@@ -11,6 +11,7 @@ import Foundation
 
 extension Task {
     
+    @discardableResult
     public class func run(launchPath:String, arguments:[String]?, silenceOutput:Bool = false) -> (output:String?, error:String?, exitCode:Int32) {
         let task = Task()
         task.launchPath = launchPath
@@ -46,19 +47,20 @@ extension Task {
             return outputString
         }
         while(task.isRunning){
-            if let outputString = read(outputPipe, false) {
-                output += outputString
-            }
             if let errorString = read(errorPipe, false) {
                 error += errorString
             }
-        }
-        if let outputString = read(outputPipe, true) {
-            output += outputString
+            if let outputString = read(outputPipe, false) {
+                output += outputString
+            }
         }
         if let errorString = read(errorPipe, true) {
             error += errorString
         }
+        if let outputString = read(outputPipe, true) {
+            output += outputString
+        }
+        
         
         let outputResult : String? = output != "" ? output : nil
         let errorResult : String? = error != "" ? error : nil
