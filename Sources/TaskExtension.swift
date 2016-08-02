@@ -55,7 +55,7 @@ extension STask {
                 return nil
             }
             #else
-            guard let outputString = String(data:data, encoding:StringEncodingUtf8)  else {
+            guard let outputString = String(data:data, encoding:String.Encoding.utf8)  else {
                 return nil
             }
             #endif
