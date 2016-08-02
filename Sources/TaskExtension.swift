@@ -7,22 +7,38 @@
 //
 
 import Foundation
+#if os(OSX) || os(iOS)
+    typealias STask = Task
+    typealias SPipe = Pipe
+    
+#elseif os(Linux)
+    typealias STask = NSTask
+    typealias SPipe = NSPipe
+    extension NSTask {
+        var isRunning : Bool {
+            get {
+                return self.running
+            }
+        }
+    }
+#endif
 
 
-extension Task {
+
+extension STask {
     
     @discardableResult
     public class func run(launchPath:String, arguments:[String]?, silenceOutput:Bool = false) -> (output:String?, error:String?, exitCode:Int32) {
-        let task = Task()
+        let task = STask()
         task.launchPath = launchPath
         if let launchArguments = arguments {
             task.arguments = launchArguments
         }
         
-        let outputPipe = Pipe()
+        let outputPipe = SPipe()
         task.standardOutput = outputPipe
         
-        let errorPipe = Pipe()
+        let errorPipe = SPipe()
         task.standardError = errorPipe
         
         task.launch()
@@ -30,12 +46,19 @@ extension Task {
         var output = String()
         var error = String()
         
-        let read = { (pipe:Pipe, toEndOfFile:Bool) -> String? in
+        let read = { (pipe:SPipe, toEndOfFile:Bool) -> String? in
             let fileHandle = pipe.fileHandleForReading
             //TODO: add timeout?
-            guard let outputString = toEndOfFile ? String(data:fileHandle.readDataToEndOfFile(), encoding:String.Encoding.utf8) : String(data:fileHandle.availableData, encoding:String.Encoding.utf8) else {
+            let data = toEndOfFile ? fileHandle.readDataToEndOfFile() : fileHandle.availableData
+            #if os(Linux)
+            guard let outputString = String(data: data, encoding:NSUTF8StringEncoding) else {
                 return nil
             }
+            #else
+            guard let outputString = String(data:data, encoding:StringEncodingUtf8)  else {
+                return nil
+            }
+            #endif
             if outputString.characters.count == 0 {
                 return nil
             }

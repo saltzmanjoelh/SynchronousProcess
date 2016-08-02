@@ -23,6 +23,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		381BFDBC1D506DDF00FFBCC1 /* ExternalBuild.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = ExternalBuild.sh; sourceTree = "<group>"; };
 		__PBXFileRef_Package.swift /* Package.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
 		__PBXFileRef_Sources/TaskExtension.swift /* TaskExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskExtension.swift; sourceTree = "<group>"; };
 		__PBXFileRef_TaskExtension.xcodeproj/Configs/Project.xcconfig /* Project.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; name = Project.xcconfig; path = TaskExtension.xcodeproj/Configs/Project.xcconfig; sourceTree = "<group>"; };
@@ -30,7 +31,7 @@
 		__PBXFileRef_TaskExtension_Info.plist /* TaskExtension_Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = TaskExtension_Info.plist; path = TaskExtension.xcodeproj/TaskExtension_Info.plist; sourceTree = SOURCE_ROOT; };
 		__PBXFileRef_Tests/TaskExtension/TaskExtensionTests.swift /* TaskExtensionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskExtensionTests.swift; sourceTree = "<group>"; };
 		"_____Product_TaskExtension" /* TaskExtension.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = TaskExtension.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		"_____Product_TaskExtensionTestSuite" /* TaskExtensionTestSuite.xctest */ = {isa = PBXFileReference; lastKnownFileType = file; path = TaskExtensionTestSuite.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		"_____Product_TaskExtensionTestSuite" /* TaskExtensionTestSuite.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; path = TaskExtensionTestSuite.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +65,7 @@
 			isa = PBXGroup;
 			children = (
 				__PBXFileRef_Package.swift /* Package.swift */,
+				381BFDBC1D506DDF00FFBCC1 /* ExternalBuild.sh */,
 				"_____Configs_" /* Configs */,
 				"_____Sources_" /* Sources */,
 				"_______Tests_" /* Tests */,
@@ -126,6 +128,23 @@
 		};
 /* End PBXGroup section */
 
+/* Begin PBXLegacyTarget section */
+		381BFDBD1D506E0E00FFBCC1 /* BuildOnLinux */ = {
+			isa = PBXLegacyTarget;
+			buildArgumentsString = ExternalBuild.sh;
+			buildConfigurationList = 381BFDBE1D506E0E00FFBCC1 /* Build configuration list for PBXLegacyTarget "BuildOnLinux" */;
+			buildPhases = (
+			);
+			buildToolPath = sh;
+			buildWorkingDirectory = /Users/joelsaltzman/Sites/Linux/TaskExtension;
+			dependencies = (
+			);
+			name = BuildOnLinux;
+			passBuildSettingsInEnvironment = 1;
+			productName = BuildOnLinux;
+		};
+/* End PBXLegacyTarget section */
+
 /* Begin PBXNativeTarget section */
 		"______Target_TaskExtension" /* TaskExtension */ = {
 			isa = PBXNativeTarget;
@@ -167,6 +186,14 @@
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 9999;
+				TargetAttributes = {
+					381BFDBD1D506E0E00FFBCC1 = {
+						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = A43A74F4MB;
+						DevelopmentTeamName = "Joel Saltzman (Personal Team)";
+						ProvisioningStyle = Automatic;
+					};
+				};
 			};
 			buildConfigurationList = "___RootConfs_" /* Build configuration list for PBXProject "TaskExtension" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -180,6 +207,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
+				381BFDBD1D506E0E00FFBCC1 /* BuildOnLinux */,
 				"______Target_TaskExtension" /* TaskExtension */,
 				"______Target_TaskExtensionTestSuite" /* TaskExtensionTestSuite */,
 			);
@@ -214,9 +242,95 @@
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
+		381BFDBF1D506E0E00FFBCC1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUGGING_SYMBOLS = YES;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		381BFDC01D506E0E00FFBCC1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 		_ReleaseConf_TaskExtension /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				DOCKER_IMAGE = saltzmanjoelh/swiftubuntu;
 				ENABLE_TESTABILITY = YES;
 				FRAMEWORK_SEARCH_PATHS = "$(PLATFORM_DIR)/Developer/Library/Frameworks";
 				INFOPLIST_FILE = TaskExtension.xcodeproj/TaskExtension_Info.plist;
@@ -238,12 +352,14 @@
 				LD_RUNPATH_SEARCH_PATHS = "@loader_path/../Frameworks";
 				OTHER_LDFLAGS = "$(inherited)";
 				OTHER_SWIFT_FLAGS = "$(inherited)";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
 		"___DebugConf_TaskExtension" /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				DOCKER_IMAGE = saltzmanjoelh/swiftubuntu;
 				ENABLE_TESTABILITY = YES;
 				FRAMEWORK_SEARCH_PATHS = "$(PLATFORM_DIR)/Developer/Library/Frameworks";
 				INFOPLIST_FILE = TaskExtension.xcodeproj/TaskExtension_Info.plist;
@@ -267,6 +383,7 @@
 				OTHER_LDFLAGS = "$(inherited)";
 				OTHER_SWIFT_FLAGS = "$(inherited)";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -287,6 +404,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		381BFDBE1D506E0E00FFBCC1 /* Build configuration list for PBXLegacyTarget "BuildOnLinux" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				381BFDBF1D506E0E00FFBCC1 /* Debug */,
+				381BFDC01D506E0E00FFBCC1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
 		"___RootConfs_" /* Build configuration list for PBXProject "TaskExtension" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
