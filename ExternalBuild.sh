@@ -9,7 +9,7 @@
 
 #DOCKER_IMAGE = saltzmanjoelh/swiftubuntu
 #AWS_CLI = /usr/local/bin/aws
-#S3_BUCKET_ROOT = projname (upload the archive to S3_BUCKET_ROOT.BRANCH_NAME, ie yprojname.develop)
+#S3_BUCKET_ROOT = projname (upload the archive to S3_BUCKET_ROOT.BRANCH_NAME, ie projname.develop)
 
 #LOG_FILE=null
 LOG_FILE="/Users/Shared/$PROJECT.txt"
