@@ -7,14 +7,8 @@
 //
 
 import Foundation
-#if os(OSX) || os(iOS)
-    typealias STask = Task
-    typealias SPipe = Pipe
-    
-#elseif os(Linux)
-    typealias STask = NSTask
-    typealias SPipe = NSPipe
-    extension NSTask {
+#if os(Linux)
+    extension Task {
         var isRunning : Bool {
             get {
                 return self.running
@@ -25,20 +19,20 @@ import Foundation
 
 
 
-extension STask {
+extension Task {
     
     @discardableResult
     public class func run(launchPath:String, arguments:[String]?, silenceOutput:Bool = false) -> (output:String?, error:String?, exitCode:Int32) {
-        let task = STask()
+        let task = Task()
         task.launchPath = launchPath
         if let launchArguments = arguments {
             task.arguments = launchArguments
         }
         
-        let outputPipe = SPipe()
+        let outputPipe = Pipe()
         task.standardOutput = outputPipe
         
-        let errorPipe = SPipe()
+        let errorPipe = Pipe()
         task.standardError = errorPipe
         
         task.launch()
@@ -46,19 +40,13 @@ extension STask {
         var output = String()
         var error = String()
         
-        let read = { (pipe:SPipe, toEndOfFile:Bool) -> String? in
+        let read = { (pipe:Pipe, toEndOfFile:Bool) -> String? in
             let fileHandle = pipe.fileHandleForReading
             //TODO: add timeout?
             let data = toEndOfFile ? fileHandle.readDataToEndOfFile() : fileHandle.availableData
-            #if os(Linux)
-            guard let outputString = String(data: data, encoding:NSUTF8StringEncoding) else {
-                return nil
-            }
-            #else
             guard let outputString = String(data:data, encoding:String.Encoding.utf8)  else {
                 return nil
             }
-            #endif
             if outputString.characters.count == 0 {
                 return nil
             }
