@@ -52,6 +52,43 @@ DOCKER_COMMAND+=$'fi\n'
 DOCKER_COMMAND+="echo \"tarring executable\"; tar -cvzf \"${S3_ARCHIVE_NAME}\" Dockerfile ssl -C .build/${BUILD_CONFIGURATION} ";DOCKER_COMMAND+=$'$BUILT_TARGET\n'
 DOCKER_COMMAND+=$'fi\n'
 fi
+echo "TOOLBOX $DOCKER_TOOLBOX"
+[ -z "$DOCKER_TOOLBOX" ] && DOCKER_TOOLBOX=0;
+if [ $DOCKER_TOOLBOX -eq 1 ]; then
+#configure vars
+VM=default
+DOCKER_MACHINE=/usr/local/bin/docker-machine
+VBOXMANAGE=/Applications/VirtualBox.app/Contents/MacOS/VBoxManage
+unset DYLD_LIBRARY_PATH
+unset LD_LIBRARY_PATH
+
+#verify apps exist
+if [ ! -f $DOCKER_MACHINE ] || [ ! -f $VBOXMANAGE ]; then
+echo "Either VirtualBox or Docker Machine are not installed. Please re-run the Toolbox Installer and try again." >> $LOG_FILE 2>&1
+exit 1
+fi
+#verify vm exists
+$VBOXMANAGE showvminfo $VM &> /dev/null
+VM_EXISTS_CODE=$?
+
+#create and start if needed
+if [ $VM_EXISTS_CODE -eq 1 ]; then
+echo "Creating Machine $VM..." >> $LOG_FILE 2>&1
+$DOCKER_MACHINE rm -f $VM &> /dev/null
+rm -rf ~/.docker/machine/machines/$VM
+$DOCKER_MACHINE create -d virtualbox --virtualbox-memory 2048 $VM
+else
+echo "Machine $VM already exists in VirtualBox." >> $LOG_FILE 2>&1
+fi
+echo "Starting machine $VM..." >> $LOG_FILE 2>&1
+$DOCKER_MACHINE start $VM
+
+#prepare docker
+echo "Machine started, logging in." >> $LOG_FILE 2>&1
+eval "$(docker-machine env --shell=bash default)" > $LOG_FILE 2>&1
+bash --login >> $LOG_FILE 2>&1
+echo "Logged in, starting image ${DOCKER_IMAGE} and running \"$DOCKER_COMMAND\"" >> $LOG_FILE 2>&1
+fi
 
 #delete existing container with same name
 DOCKER_ACTION="run -v $PROJECT_DIR:$PROJECT_DIR --name $DOCKER_CONTAINER_NAME"
@@ -60,7 +97,7 @@ if [ $PS_RESULT -gt 0 ]; then docker rm -v $DOCKER_CONTAINER_NAME ; fi #if conta
 
 
 #start container
-echo "docker $DOCKER_ACTION $DOCKER_IMAGE /bin/bash -c \"$DOCKER_COMMAND\"" # don't redirect output, xcode will handle it for you >> $LOG_FILE 2>&1
+docker $DOCKER_ACTION $DOCKER_IMAGE /bin/bash -c "$DOCKER_COMMAND" # don't redirect output, xcode will handle it for you >> $LOG_FILE 2>&1
 
 
 #upload archive from osx

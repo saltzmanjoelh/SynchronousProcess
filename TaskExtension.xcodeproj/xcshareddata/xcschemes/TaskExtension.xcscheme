@@ -14,20 +14,6 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "381BFDBD1D506E0E00FFBCC1"
-               BuildableName = "BuildOnLinux"
-               BlueprintName = "BuildOnLinux"
-               ReferencedContainer = "container:TaskExtension.xcodeproj">
-            </BuildableReference>
-         </BuildActionEntry>
-         <BuildActionEntry
-            buildForTesting = "YES"
-            buildForRunning = "YES"
-            buildForProfiling = "YES"
-            buildForArchiving = "YES"
-            buildForAnalyzing = "YES">
-            <BuildableReference
-               BuildableIdentifier = "primary"
                BlueprintIdentifier = "______Target_TaskExtension"
                BuildableName = "TaskExtension.framework"
                BlueprintName = "TaskExtension"
