@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "0800"
+   LastUpgradeVersion = "9999"
    version = "1.3">
    <BuildAction
-      parallelizeBuildables = "YES"
+      parallelizeBuildables = "NO"
       buildImplicitDependencies = "YES">
       <BuildActionEntries>
          <BuildActionEntry
@@ -14,10 +14,10 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "381BFDBD1D506E0E00FFBCC1"
-               BuildableName = "BuildOnLinux"
-               BlueprintName = "BuildOnLinux"
-               ReferencedContainer = "container:TaskExtension.xcodeproj">
+               BlueprintIdentifier = "______Target_SynchronousTask"
+               BuildableName = "SynchronousTask.framework"
+               BlueprintName = "SynchronousTask"
+               ReferencedContainer = "container:SynchronousTask.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -28,7 +28,26 @@
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "______Target_SynchronousTaskTestSuite"
+               BuildableName = "SynchronousTaskTestSuite.xctest"
+               BlueprintName = "SynchronousTaskTestSuite"
+               ReferencedContainer = "container:SynchronousTask.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
+      <MacroExpansion>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "______Target_SynchronousTask"
+            BuildableName = "SynchronousTask.framework"
+            BlueprintName = "SynchronousTask"
+            ReferencedContainer = "container:SynchronousTask.xcodeproj">
+         </BuildableReference>
+      </MacroExpansion>
       <AdditionalOptions>
       </AdditionalOptions>
    </TestAction>
@@ -45,10 +64,10 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "381BFDBD1D506E0E00FFBCC1"
-            BuildableName = "BuildOnLinux"
-            BlueprintName = "BuildOnLinux"
-            ReferencedContainer = "container:TaskExtension.xcodeproj">
+            BlueprintIdentifier = "______Target_SynchronousTask"
+            BuildableName = "SynchronousTask.framework"
+            BlueprintName = "SynchronousTask"
+            ReferencedContainer = "container:SynchronousTask.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -63,10 +82,10 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "381BFDBD1D506E0E00FFBCC1"
-            BuildableName = "BuildOnLinux"
-            BlueprintName = "BuildOnLinux"
-            ReferencedContainer = "container:TaskExtension.xcodeproj">
+            BlueprintIdentifier = "______Target_SynchronousTask"
+            BuildableName = "SynchronousTask.framework"
+            BlueprintName = "SynchronousTask"
+            ReferencedContainer = "container:SynchronousTask.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </ProfileAction>

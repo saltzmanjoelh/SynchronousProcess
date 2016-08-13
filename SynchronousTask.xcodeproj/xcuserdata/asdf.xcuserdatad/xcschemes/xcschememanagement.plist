@@ -2,19 +2,6 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>SchemeUserState</key>
-	<dict>
-		<key>BuildOnLinux.xcscheme</key>
-		<dict>
-			<key>orderHint</key>
-			<integer>1</integer>
-		</dict>
-		<key>TaskExtension.xcscheme_^#shared#^_</key>
-		<dict>
-			<key>orderHint</key>
-			<integer>0</integer>
-		</dict>
-	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
 		<key>381BFDBD1D506E0E00FFBCC1</key>
@@ -22,12 +9,12 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>______Target_TaskExtension</key>
+		<key>______Target_SynchronousTask</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>______Target_TaskExtensionTestSuite</key>
+		<key>______Target_SynchronousTaskTestSuite</key>
 		<dict>
 			<key>primary</key>
 			<true/>

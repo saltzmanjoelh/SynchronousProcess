@@ -1,6 +1,6 @@
 import XCTest
-@testable import TaskExtensionTestSuite
+@testable import SynchronousTaskTestSuite
 
 XCTMain([
-     testCase(TaskExtensionTests.allTests),
+     testCase(SynchronousTaskTests.allTests),
 ])

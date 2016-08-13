@@ -1,7 +1,7 @@
 import XCTest
-@testable import TaskExtension
+@testable import SynchronousTask
 
-class TaskExtensionTests: XCTestCase {
+class SynchronousTaskTests: XCTestCase {
     func testMultipleBashCalls() {
         
         let result = Task.run(launchPath: "/bin/bash", arguments: ["-c", "echo test && echo test2; echo test3"], silenceOutput: false)
@@ -16,7 +16,7 @@ class TaskExtensionTests: XCTestCase {
     }
 
 
-    static var allTests : [(String, (TaskExtensionTests) -> () throws -> Void)] {
+    static var allTests : [(String, (SynchronousTaskTests) -> () throws -> Void)] {
         return [
             ("testMultipleBashCalls", testMultipleBashCalls),
         ]

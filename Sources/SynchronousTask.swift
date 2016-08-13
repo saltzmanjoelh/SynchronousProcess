@@ -1,5 +1,5 @@
 //
-//  TaskExtensions.swift
+//  SynchronousTasks.swift
 //  DockerTask
 //
 //  Created by Joel Saltzman on 7/27/16.
