@@ -27,18 +27,22 @@ extension Task {
     
     @discardableResult
     public class func run(launchPath:String, arguments:[String]?, silenceOutput:Bool = false) -> (output:String?, error:String?, exitCode:Int32) {
-        
         let task = Task()
         task.launchPath = launchPath
         if let launchArguments = arguments {
             task.arguments = launchArguments
         }
+        return task.run(silenceOutput: silenceOutput)
+    }
+    @discardableResult
+    public func run(silenceOutput:Bool = false) -> (output:String?, error:String?, exitCode:Int32) {
+        
         
         let outputPipe = Pipe()
-        task.standardOutput = outputPipe
+        self.standardOutput = outputPipe
         
         let errorPipe = Pipe()
-        task.standardError = errorPipe
+        self.standardError = errorPipe
         
         
         var output = String()
@@ -47,7 +51,7 @@ extension Task {
         let dataTransformer : (Data) -> (String?) = {
             data in
             if data.count == 0 {
-                task.terminate()
+                self.terminate()
             }
             if let string = String(data:data, encoding:String.Encoding.utf8) {
                 if(!silenceOutput){
@@ -74,9 +78,9 @@ extension Task {
         NotificationCenter.default.addObserver(forName: FileHandle.readCompletionNotification, object: outputPipe.fileHandleForReading, queue: OperationQueue.main, using: readHandler)
         NotificationCenter.default.addObserver(forName: FileHandle.readCompletionNotification, object: errorPipe.fileHandleForReading, queue: OperationQueue.main, using: readHandler)
         
-        task.launch()
+        self.launch()
         
-        while(task.isRunning){
+        while(self.isRunning){
             outputPipe.fileHandleForReading.readInBackgroundAndNotify()
             errorPipe.fileHandleForReading.readInBackgroundAndNotify()
             let runLoop = RunLoop.current
@@ -96,6 +100,6 @@ extension Task {
         let outputResult : String? = output != "" ? output : nil
         let errorResult : String? = error != "" ? error : nil
         
-        return (outputResult, errorResult, task.terminationStatus)
+        return (outputResult, errorResult, self.terminationStatus)
     }
 }
