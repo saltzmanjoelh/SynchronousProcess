@@ -14,14 +14,14 @@
 #LOG_FILE=null
 LOG_FILE="/Users/Shared/$PROJECT.txt"
 
-[ -z "$DOCKER_IMAGE" ] && DOCKER_IMAGE="saltzmanjoelh/swiftubuntu"
+if [ -z "$DOCKER_IMAGE" ]; then DOCKER_IMAGE="saltzmanjoelh/swiftubuntu"; fi;
 
 #Since the ExternalBuild Target uses a different TARGET_NAME from the source project, we assume that we a building something with the same name as the project's name
 #if that is not the case, you can specify a User Defined Build Setting BUILT_PRODUCT_NAME=MySwiftTargetName
-[ -z "$BUILT_PRODUCT_NAME" ] && BUILT_PRODUCT_NAME=$PROJECT;
+if [ -z "$BUILT_PRODUCT_NAME" ]; then BUILT_PRODUCT_NAME=$PROJECT; fi;
 echo "Building $BUILT_PRODUCT_NAME" > $LOG_FILE 2>&1
 
-[ -z "$DOCKER_CONTAINER_NAME" ] && DOCKER_CONTAINER_NAME=$PROJECT;
+if [ -z "$DOCKER_CONTAINER_NAME" ]; then DOCKER_CONTAINER_NAME=$PROJECT; fi;
 echo "Container Name: $DOCKER_CONTAINER_NAME" > $LOG_FILE 2>&1
 
 #if [ $ACTION == 'clean' ]; then #If cleaning, delete it
@@ -52,8 +52,9 @@ DOCKER_COMMAND+=$'fi\n'
 DOCKER_COMMAND+="echo \"tarring executable\"; tar -cvzf \"${S3_ARCHIVE_NAME}\" Dockerfile ssl -C .build/${BUILD_CONFIGURATION} ";DOCKER_COMMAND+=$'$BUILT_TARGET\n'
 DOCKER_COMMAND+=$'fi\n'
 fi
+
+if [ -z "$DOCKER_TOOLBOX" ]; then DOCKER_TOOLBOX=1; fi;
 echo "TOOLBOX $DOCKER_TOOLBOX"
-[ -z "$DOCKER_TOOLBOX" ] && DOCKER_TOOLBOX=0;
 if [ $DOCKER_TOOLBOX -eq 1 ]; then
 #configure vars
 VM=default
@@ -70,6 +71,8 @@ fi
 #verify vm exists
 $VBOXMANAGE showvminfo $VM &> /dev/null
 VM_EXISTS_CODE=$?
+
+
 
 #create and start if needed
 if [ $VM_EXISTS_CODE -eq 1 ]; then

@@ -7,46 +7,43 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		_LinkFileRef_SynchronousTask_via_SynchronousTaskTestSuite /* SynchronousTask.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "_____Product_SynchronousTask" /* SynchronousTask.framework */; };
-		__src_cc_ref_Sources/SynchronousTask.swift /* SynchronousTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = __PBXFileRef_Sources/SynchronousTask.swift /* SynchronousTask.swift */; };
-		__src_cc_ref_Tests/SynchronousTask/SynchronousTaskTests.swift /* SynchronousTaskTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = __PBXFileRef_Tests/SynchronousTask/SynchronousTaskTests.swift /* SynchronousTaskTests.swift */; };
+		_LinkFileRef_SynchronousProcess_via_SynchronousProcessTests /* SynchronousProcess.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "_____Product_SynchronousProcess" /* SynchronousProcess.framework */; };
+		__src_cc_ref_Sources/SynchronousProcess.swift /* SynchronousProcess.swift in Sources */ = {isa = PBXBuildFile; fileRef = __PBXFileRef_Sources/SynchronousProcess.swift /* SynchronousProcess.swift */; };
+		__src_cc_ref_Tests/SynchronousProcessTests/SynchronousProcessTests.swift /* SynchronousProcessTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = __PBXFileRef_Tests/SynchronousProcessTests/SynchronousProcessTests.swift /* SynchronousProcessTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		38F4EDD01D4C9058004D7D21 /* PBXContainerItemProxy */ = {
+		388A2FE11D66914000EB2046 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = __RootObject_ /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = "______Target_SynchronousTask";
-			remoteInfo = SynchronousTask;
+			remoteGlobalIDString = "______Target_SynchronousProcess";
+			remoteInfo = SynchronousProcess;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		381BFDBC1D506DDF00FFBCC1 /* ExternalBuild.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = ExternalBuild.sh; sourceTree = "<group>"; };
 		__PBXFileRef_Package.swift /* Package.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
-		__PBXFileRef_Sources/SynchronousTask.swift /* SynchronousTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SynchronousTask.swift; sourceTree = "<group>"; };
-		__PBXFileRef_SynchronousTask.xcodeproj/Configs/Project.xcconfig /* Project.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; name = Project.xcconfig; path = SynchronousTask.xcodeproj/Configs/Project.xcconfig; sourceTree = "<group>"; };
-		__PBXFileRef_SynchronousTaskTestSuite_Info.plist /* SynchronousTaskTestSuite_Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = SynchronousTaskTestSuite_Info.plist; path = SynchronousTask.xcodeproj/SynchronousTaskTestSuite_Info.plist; sourceTree = SOURCE_ROOT; };
-		__PBXFileRef_SynchronousTask_Info.plist /* SynchronousTask_Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = SynchronousTask_Info.plist; path = SynchronousTask.xcodeproj/SynchronousTask_Info.plist; sourceTree = SOURCE_ROOT; };
-		__PBXFileRef_Tests/SynchronousTask/SynchronousTaskTests.swift /* SynchronousTaskTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SynchronousTaskTests.swift; sourceTree = "<group>"; };
-		"_____Product_SynchronousTask" /* SynchronousTask.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SynchronousTask.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		"_____Product_SynchronousTaskTestSuite" /* SynchronousTaskTestSuite.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; path = SynchronousTaskTestSuite.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		__PBXFileRef_Sources/SynchronousProcess.swift /* SynchronousProcess.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SynchronousProcess.swift; sourceTree = "<group>"; };
+		__PBXFileRef_SynchronousProcess.xcodeproj/Configs/Project.xcconfig /* SynchronousProcess.xcodeproj/Configs/Project.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = SynchronousProcess.xcodeproj/Configs/Project.xcconfig; sourceTree = "<group>"; };
+		__PBXFileRef_Tests/SynchronousProcessTests/SynchronousProcessTests.swift /* SynchronousProcessTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SynchronousProcessTests.swift; sourceTree = "<group>"; };
+		"_____Product_SynchronousProcess" /* SynchronousProcess.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SynchronousProcess.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		"_____Product_SynchronousProcessTests" /* SynchronousProcessTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; path = SynchronousProcessTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		"___LinkPhase_SynchronousTask" /* Frameworks */ = {
+		"___LinkPhase_SynchronousProcess" /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 0;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		"___LinkPhase_SynchronousTaskTestSuite" /* Frameworks */ = {
+		"___LinkPhase_SynchronousProcessTests" /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 0;
 			files = (
-				_LinkFileRef_SynchronousTask_via_SynchronousTaskTestSuite /* SynchronousTask.framework in Frameworks */,
+				_LinkFileRef_SynchronousProcess_via_SynchronousProcessTests /* SynchronousProcess.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -56,7 +53,7 @@
 		TestProducts_ /* Tests */ = {
 			isa = PBXGroup;
 			children = (
-				"_____Product_SynchronousTaskTestSuite" /* SynchronousTaskTestSuite.xctest */,
+				"_____Product_SynchronousProcessTests" /* SynchronousProcessTests.xctest */,
 			);
 			name = Tests;
 			sourceTree = "<group>";
@@ -65,7 +62,6 @@
 			isa = PBXGroup;
 			children = (
 				__PBXFileRef_Package.swift /* Package.swift */,
-				381BFDBC1D506DDF00FFBCC1 /* ExternalBuild.sh */,
 				"_____Configs_" /* Configs */,
 				"_____Sources_" /* Sources */,
 				"_______Tests_" /* Tests */,
@@ -77,7 +73,7 @@
 			isa = PBXGroup;
 			children = (
 				TestProducts_ /* Tests */,
-				"_____Product_SynchronousTask" /* SynchronousTask.framework */,
+				"_____Product_SynchronousProcess" /* SynchronousProcess.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -85,7 +81,7 @@
 		"_____Configs_" /* Configs */ = {
 			isa = PBXGroup;
 			children = (
-				__PBXFileRef_SynchronousTask.xcodeproj/Configs/Project.xcconfig /* Project.xcconfig */,
+				__PBXFileRef_SynchronousProcess.xcodeproj/Configs/Project.xcconfig /* SynchronousProcess.xcodeproj/Configs/Project.xcconfig */,
 			);
 			name = Configs;
 			sourceTree = "<group>";
@@ -93,35 +89,33 @@
 		"_____Sources_" /* Sources */ = {
 			isa = PBXGroup;
 			children = (
-				"_______Group_SynchronousTask" /* SynchronousTask */,
+				"_______Group_SynchronousProcess" /* SynchronousProcess */,
 			);
 			name = Sources;
 			sourceTree = "<group>";
 		};
-		"_______Group_SynchronousTask" /* SynchronousTask */ = {
+		"_______Group_SynchronousProcess" /* SynchronousProcess */ = {
 			isa = PBXGroup;
 			children = (
-				__PBXFileRef_Sources/SynchronousTask.swift /* SynchronousTask.swift */,
-				__PBXFileRef_SynchronousTask_Info.plist /* SynchronousTask_Info.plist */,
+				__PBXFileRef_Sources/SynchronousProcess.swift /* SynchronousProcess.swift */,
 			);
-			name = SynchronousTask;
+			name = SynchronousProcess;
 			path = Sources;
 			sourceTree = "<group>";
 		};
-		"_______Group_SynchronousTaskTestSuite" /* SynchronousTaskTestSuite */ = {
+		"_______Group_SynchronousProcessTests" /* SynchronousProcessTests */ = {
 			isa = PBXGroup;
 			children = (
-				__PBXFileRef_Tests/SynchronousTask/SynchronousTaskTests.swift /* SynchronousTaskTests.swift */,
-				__PBXFileRef_SynchronousTaskTestSuite_Info.plist /* SynchronousTaskTestSuite_Info.plist */,
+				__PBXFileRef_Tests/SynchronousProcessTests/SynchronousProcessTests.swift /* SynchronousProcessTests.swift */,
 			);
-			name = SynchronousTaskTestSuite;
-			path = Tests/SynchronousTask;
+			name = SynchronousProcessTests;
+			path = Tests/SynchronousProcessTests;
 			sourceTree = "<group>";
 		};
 		"_______Tests_" /* Tests */ = {
 			isa = PBXGroup;
 			children = (
-				"_______Group_SynchronousTaskTestSuite" /* SynchronousTaskTestSuite */,
+				"_______Group_SynchronousProcessTests" /* SynchronousProcessTests */,
 			);
 			name = Tests;
 			sourceTree = "<group>";
@@ -129,54 +123,54 @@
 /* End PBXGroup section */
 
 /* Begin PBXLegacyTarget section */
-		381BFDBD1D506E0E00FFBCC1 /* BuildOnLinux */ = {
+		388A2FE31D66925700EB2046 /* ExternalBuild */ = {
 			isa = PBXLegacyTarget;
 			buildArgumentsString = ExternalBuild.sh;
-			buildConfigurationList = 381BFDBE1D506E0E00FFBCC1 /* Build configuration list for PBXLegacyTarget "BuildOnLinux" */;
+			buildConfigurationList = 388A2FE41D66925700EB2046 /* Build configuration list for PBXLegacyTarget "ExternalBuild" */;
 			buildPhases = (
 			);
 			buildToolPath = sh;
-			buildWorkingDirectory = /Users/asdf/Sites/Linux/SynchronousTask;
+			buildWorkingDirectory = "";
 			dependencies = (
 			);
-			name = BuildOnLinux;
+			name = ExternalBuild;
 			passBuildSettingsInEnvironment = 1;
-			productName = BuildOnLinux;
+			productName = ExternalBuild;
 		};
 /* End PBXLegacyTarget section */
 
 /* Begin PBXNativeTarget section */
-		"______Target_SynchronousTask" /* SynchronousTask */ = {
+		"______Target_SynchronousProcess" /* SynchronousProcess */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = "_______Confs_SynchronousTask" /* Build configuration list for PBXNativeTarget "SynchronousTask" */;
+			buildConfigurationList = "_______Confs_SynchronousProcess" /* Build configuration list for PBXNativeTarget "SynchronousProcess" */;
 			buildPhases = (
-				CompilePhase_SynchronousTask /* Sources */,
-				"___LinkPhase_SynchronousTask" /* Frameworks */,
+				CompilePhase_SynchronousProcess /* Sources */,
+				"___LinkPhase_SynchronousProcess" /* Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = SynchronousTask;
-			productName = SynchronousTask;
-			productReference = "_____Product_SynchronousTask" /* SynchronousTask.framework */;
+			name = SynchronousProcess;
+			productName = SynchronousProcess;
+			productReference = "_____Product_SynchronousProcess" /* SynchronousProcess.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		"______Target_SynchronousTaskTestSuite" /* SynchronousTaskTestSuite */ = {
+		"______Target_SynchronousProcessTests" /* SynchronousProcessTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = "_______Confs_SynchronousTaskTestSuite" /* Build configuration list for PBXNativeTarget "SynchronousTaskTestSuite" */;
+			buildConfigurationList = "_______Confs_SynchronousProcessTests" /* Build configuration list for PBXNativeTarget "SynchronousProcessTests" */;
 			buildPhases = (
-				CompilePhase_SynchronousTaskTestSuite /* Sources */,
-				"___LinkPhase_SynchronousTaskTestSuite" /* Frameworks */,
+				CompilePhase_SynchronousProcessTests /* Sources */,
+				"___LinkPhase_SynchronousProcessTests" /* Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				__Dependency_SynchronousTask /* PBXTargetDependency */,
+				__Dependency_SynchronousProcess /* PBXTargetDependency */,
 			);
-			name = SynchronousTaskTestSuite;
-			productName = SynchronousTaskTestSuite;
-			productReference = "_____Product_SynchronousTaskTestSuite" /* SynchronousTaskTestSuite.xctest */;
+			name = SynchronousProcessTests;
+			productName = SynchronousProcessTests;
+			productReference = "_____Product_SynchronousProcessTests" /* SynchronousProcessTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -187,15 +181,14 @@
 			attributes = {
 				LastUpgradeCheck = 9999;
 				TargetAttributes = {
-					381BFDBD1D506E0E00FFBCC1 = {
+					388A2FE31D66925700EB2046 = {
 						CreatedOnToolsVersion = 8.0;
 						DevelopmentTeam = A43A74F4MB;
-						DevelopmentTeamName = "Joel Saltzman (Personal Team)";
 						ProvisioningStyle = Automatic;
 					};
 				};
 			};
-			buildConfigurationList = "___RootConfs_" /* Build configuration list for PBXProject "SynchronousTask" */;
+			buildConfigurationList = "___RootConfs_" /* Build configuration list for PBXProject "SynchronousProcess" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -207,42 +200,42 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				381BFDBD1D506E0E00FFBCC1 /* BuildOnLinux */,
-				"______Target_SynchronousTask" /* SynchronousTask */,
-				"______Target_SynchronousTaskTestSuite" /* SynchronousTaskTestSuite */,
+				388A2FE31D66925700EB2046 /* ExternalBuild */,
+				"______Target_SynchronousProcess" /* SynchronousProcess */,
+				"______Target_SynchronousProcessTests" /* SynchronousProcessTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
-		CompilePhase_SynchronousTask /* Sources */ = {
+		CompilePhase_SynchronousProcess /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 0;
 			files = (
-				__src_cc_ref_Sources/SynchronousTask.swift /* SynchronousTask.swift in Sources */,
+				__src_cc_ref_Sources/SynchronousProcess.swift /* SynchronousProcess.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		CompilePhase_SynchronousTaskTestSuite /* Sources */ = {
+		CompilePhase_SynchronousProcessTests /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 0;
 			files = (
-				__src_cc_ref_Tests/SynchronousTask/SynchronousTaskTests.swift /* SynchronousTaskTests.swift in Sources */,
+				__src_cc_ref_Tests/SynchronousProcessTests/SynchronousProcessTests.swift /* SynchronousProcessTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		__Dependency_SynchronousTask /* PBXTargetDependency */ = {
+		__Dependency_SynchronousProcess /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = "______Target_SynchronousTask" /* SynchronousTask */;
-			targetProxy = 38F4EDD01D4C9058004D7D21 /* PBXContainerItemProxy */;
+			target = "______Target_SynchronousProcess" /* SynchronousProcess */;
+			targetProxy = 388A2FE11D66914000EB2046 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		381BFDBF1D506E0E00FFBCC1 /* Debug */ = {
+		388A2FE51D66925700EB2046 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -257,13 +250,16 @@
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
 				DEBUGGING_SYMBOLS = YES;
 				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = A43A74F4MB;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -289,7 +285,7 @@
 			};
 			name = Debug;
 		};
-		381BFDC01D506E0E00FFBCC1 /* Release */ = {
+		388A2FE61D66925700EB2046 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -304,12 +300,15 @@
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = A43A74F4MB;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -327,29 +326,28 @@
 			};
 			name = Release;
 		};
-		_ReleaseConf_SynchronousTask /* Release */ = {
+		_ReleaseConf_SynchronousProcess /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				DOCKER_IMAGE = saltzmanjoelh/swiftubuntu;
-                DOCKER_TOOLBOX = 1;
 				ENABLE_TESTABILITY = YES;
 				FRAMEWORK_SEARCH_PATHS = "$(PLATFORM_DIR)/Developer/Library/Frameworks";
-				INFOPLIST_FILE = SynchronousTask.xcodeproj/SynchronousTask_Info.plist;
+				INFOPLIST_FILE = SynchronousProcess.xcodeproj/SynchronousProcess_Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
 				OTHER_LDFLAGS = "$(inherited)";
 				OTHER_SWIFT_FLAGS = "$(inherited)";
+				PRODUCT_BUNDLE_IDENTIFIER = SynchronousProcess;
 				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
-		_ReleaseConf_SynchronousTaskTestSuite /* Release */ = {
+		_ReleaseConf_SynchronousProcessTests /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				FRAMEWORK_SEARCH_PATHS = "$(PLATFORM_DIR)/Developer/Library/Frameworks";
-				INFOPLIST_FILE = SynchronousTask.xcodeproj/SynchronousTaskTestSuite_Info.plist;
+				INFOPLIST_FILE = SynchronousProcess.xcodeproj/SynchronousProcessTests_Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "@loader_path/../Frameworks";
 				OTHER_LDFLAGS = "$(inherited)";
 				OTHER_SWIFT_FLAGS = "$(inherited)";
@@ -357,17 +355,16 @@
 			};
 			name = Release;
 		};
-		"___DebugConf_SynchronousTask" /* Debug */ = {
+		"___DebugConf_SynchronousProcess" /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				DOCKER_IMAGE = saltzmanjoelh/swiftubuntu;
-                DOCKER_TOOLBOX = 1;
 				ENABLE_TESTABILITY = YES;
 				FRAMEWORK_SEARCH_PATHS = "$(PLATFORM_DIR)/Developer/Library/Frameworks";
-				INFOPLIST_FILE = SynchronousTask.xcodeproj/SynchronousTask_Info.plist;
+				INFOPLIST_FILE = SynchronousProcess.xcodeproj/SynchronousProcess_Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
 				OTHER_LDFLAGS = "$(inherited)";
 				OTHER_SWIFT_FLAGS = "$(inherited)";
+				PRODUCT_BUNDLE_IDENTIFIER = SynchronousProcess;
 				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -375,12 +372,12 @@
 			};
 			name = Debug;
 		};
-		"___DebugConf_SynchronousTaskTestSuite" /* Debug */ = {
+		"___DebugConf_SynchronousProcessTests" /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				FRAMEWORK_SEARCH_PATHS = "$(PLATFORM_DIR)/Developer/Library/Frameworks";
-				INFOPLIST_FILE = SynchronousTask.xcodeproj/SynchronousTaskTestSuite_Info.plist;
+				INFOPLIST_FILE = SynchronousProcess.xcodeproj/SynchronousProcessTests_Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "@loader_path/../Frameworks";
 				OTHER_LDFLAGS = "$(inherited)";
 				OTHER_SWIFT_FLAGS = "$(inherited)";
@@ -391,14 +388,14 @@
 		};
 		"_____Release_" /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = __PBXFileRef_SynchronousTask.xcodeproj/Configs/Project.xcconfig /* Project.xcconfig */;
+			baseConfigurationReference = __PBXFileRef_SynchronousProcess.xcodeproj/Configs/Project.xcconfig /* SynchronousProcess.xcodeproj/Configs/Project.xcconfig */;
 			buildSettings = {
 			};
 			name = Release;
 		};
 		"_______Debug_" /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = __PBXFileRef_SynchronousTask.xcodeproj/Configs/Project.xcconfig /* Project.xcconfig */;
+			baseConfigurationReference = __PBXFileRef_SynchronousProcess.xcodeproj/Configs/Project.xcconfig /* SynchronousProcess.xcodeproj/Configs/Project.xcconfig */;
 			buildSettings = {
 			};
 			name = Debug;
@@ -406,16 +403,16 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		381BFDBE1D506E0E00FFBCC1 /* Build configuration list for PBXLegacyTarget "BuildOnLinux" */ = {
+		388A2FE41D66925700EB2046 /* Build configuration list for PBXLegacyTarget "ExternalBuild" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				381BFDBF1D506E0E00FFBCC1 /* Debug */,
-				381BFDC01D506E0E00FFBCC1 /* Release */,
+				388A2FE51D66925700EB2046 /* Debug */,
+				388A2FE61D66925700EB2046 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Debug;
 		};
-		"___RootConfs_" /* Build configuration list for PBXProject "SynchronousTask" */ = {
+		"___RootConfs_" /* Build configuration list for PBXProject "SynchronousProcess" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				"_______Debug_" /* Debug */,
@@ -424,20 +421,20 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Debug;
 		};
-		"_______Confs_SynchronousTask" /* Build configuration list for PBXNativeTarget "SynchronousTask" */ = {
+		"_______Confs_SynchronousProcess" /* Build configuration list for PBXNativeTarget "SynchronousProcess" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				"___DebugConf_SynchronousTask" /* Debug */,
-				_ReleaseConf_SynchronousTask /* Release */,
+				"___DebugConf_SynchronousProcess" /* Debug */,
+				_ReleaseConf_SynchronousProcess /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Debug;
 		};
-		"_______Confs_SynchronousTaskTestSuite" /* Build configuration list for PBXNativeTarget "SynchronousTaskTestSuite" */ = {
+		"_______Confs_SynchronousProcessTests" /* Build configuration list for PBXNativeTarget "SynchronousProcessTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				"___DebugConf_SynchronousTaskTestSuite" /* Debug */,
-				_ReleaseConf_SynchronousTaskTestSuite /* Release */,
+				"___DebugConf_SynchronousProcessTests" /* Debug */,
+				_ReleaseConf_SynchronousProcessTests /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Debug;

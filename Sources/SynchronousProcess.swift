@@ -1,6 +1,6 @@
 //
-//  SynchronousTasks.swift
-//  DockerTask
+//  SynchronousProcesss.swift
+//  DockerProcess
 //
 //  Created by Joel Saltzman on 7/27/16.
 //
@@ -9,33 +9,24 @@
 
 
 import Foundation
-#if os(Linux)
-    extension Task {
-        var isRunning : Bool {
-            get {
-                return self.running
-            }
-        }
-    }
-#endif
 
-typealias TaskResult = (output:String?, error:String?, exitCode:Int32)
+typealias ProcessResult = (output:String?, error:String?, exitCode:Int32)
 
 
 
-extension Task {
+extension Process {
     
     @discardableResult
-    public class func run(launchPath:String, arguments:[String]?, silenceOutput:Bool = false) -> (output:String?, error:String?, exitCode:Int32) {
-        let task = Task()
-        task.launchPath = launchPath
+    public static func run(_ launchPath:String, arguments:[String]?, silenceOutput:Bool = false) -> (output:String?, error:String?, exitCode:Int32) {
+        let process = Process()
+        process.launchPath = launchPath
         if let launchArguments = arguments {
-            task.arguments = launchArguments
+            process.arguments = launchArguments
         }
-        return task.run(silenceOutput: silenceOutput)
+        return process.run(silenceOutput)
     }
     @discardableResult
-    public func run(silenceOutput:Bool = false) -> (output:String?, error:String?, exitCode:Int32) {
+    public func run(_ silenceOutput:Bool = false) -> (output:String?, error:String?, exitCode:Int32) {
         
         
         let outputPipe = Pipe()

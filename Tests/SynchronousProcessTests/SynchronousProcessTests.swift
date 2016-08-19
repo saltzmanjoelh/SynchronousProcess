@@ -1,10 +1,10 @@
 import XCTest
-@testable import SynchronousTask
+@testable import SynchronousProcess
 
-class SynchronousTaskTests: XCTestCase {
+class SynchronousProcessTests: XCTestCase {
     func testMultipleBashCalls() {
         
-        let result = Task.run(launchPath: "/bin/bash", arguments: ["-c", "echo test && echo test2; echo test3"], silenceOutput: false)
+        let result = Process.run("/bin/bash", arguments: ["-c", "echo test && echo test2; echo test3"], silenceOutput: false)
         
         if let error = result.error {
             XCTFail("\(error)")
@@ -16,7 +16,7 @@ class SynchronousTaskTests: XCTestCase {
     }
 
 
-    static var allTests : [(String, (SynchronousTaskTests) -> () throws -> Void)] {
+    static var allTests : [(String, (SynchronousProcessTests) -> () throws -> Void)] {
         return [
             ("testMultipleBashCalls", testMultipleBashCalls),
         ]

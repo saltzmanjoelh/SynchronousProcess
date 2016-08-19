@@ -4,12 +4,12 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>BuildOnLinux.xcscheme</key>
+		<key>ExternalBuild.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
 			<integer>1</integer>
 		</dict>
-		<key>SynchronousTask.xcscheme_^#shared#^_</key>
+		<key>SynchronousProcess.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
 			<integer>0</integer>
@@ -17,17 +17,17 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>381BFDBD1D506E0E00FFBCC1</key>
+		<key>388A2FE31D66925700EB2046</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>______Target_SynchronousTask</key>
+		<key>______Target_SynchronousProcess</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>______Target_SynchronousTaskTestSuite</key>
+		<key>______Target_SynchronousProcessTests</key>
 		<dict>
 			<key>primary</key>
 			<true/>

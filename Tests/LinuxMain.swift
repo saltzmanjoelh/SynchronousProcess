@@ -1,6 +1,6 @@
 import XCTest
-@testable import SynchronousTaskTestSuite
+@testable import SynchronousProcessTestSuite
 
 XCTMain([
-     testCase(SynchronousTaskTests.allTests),
+     testCase(SynchronousProcessTests.allTests),
 ])
