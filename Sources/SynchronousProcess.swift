@@ -81,7 +81,7 @@ extension Process {
         if let outputString = dataTransformer(outputPipe.fileHandleForReading.readDataToEndOfFile()) {
             output += outputString
         }
-        if let errorString = dataTransformer(outputPipe.fileHandleForReading.readDataToEndOfFile()) {
+        if let errorString = dataTransformer(errorPipe.fileHandleForReading.readDataToEndOfFile()) {
             error += errorString
         }
         
