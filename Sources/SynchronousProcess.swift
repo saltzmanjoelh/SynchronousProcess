@@ -10,14 +10,14 @@
 
 import Foundation
 
-typealias ProcessResult = (output:String?, error:String?, exitCode:Int32)
+public typealias ProcessResult = (output:String?, error:String?, exitCode:Int32)
 
 
 
 extension Process {
     
     @discardableResult
-    public static func run(_ launchPath:String, arguments:[String]?, silenceOutput:Bool = false) -> (output:String?, error:String?, exitCode:Int32) {
+    public static func run(_ launchPath:String, arguments:[String]?, silenceOutput:Bool = false) -> ProcessResult {
         let process = Process()
         process.launchPath = launchPath
         if let launchArguments = arguments {
@@ -26,7 +26,7 @@ extension Process {
         return process.run(silenceOutput)
     }
     @discardableResult
-    public func run(_ silenceOutput:Bool = false) -> (output:String?, error:String?, exitCode:Int32) {
+    public func run(_ silenceOutput:Bool = false) -> ProcessResult {
         
         
         let outputPipe = Pipe()
