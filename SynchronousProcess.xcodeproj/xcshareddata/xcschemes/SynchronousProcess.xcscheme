@@ -3,7 +3,7 @@
    LastUpgradeVersion = "9999"
    version = "1.3">
    <BuildAction
-      parallelizeBuildables = "NO"
+      parallelizeBuildables = "YES"
       buildImplicitDependencies = "YES">
       <BuildActionEntries>
          <BuildActionEntry
@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "______Target_SynchronousProcess"
+               BlueprintIdentifier = "OBJ_17"
                BuildableName = "SynchronousProcess.framework"
                BlueprintName = "SynchronousProcess"
                ReferencedContainer = "container:SynchronousProcess.xcodeproj">
@@ -32,22 +32,13 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "______Target_SynchronousProcessTests"
+               BlueprintIdentifier = "OBJ_25"
                BuildableName = "SynchronousProcessTests.xctest"
                BlueprintName = "SynchronousProcessTests"
                ReferencedContainer = "container:SynchronousProcess.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
-      <MacroExpansion>
-         <BuildableReference
-            BuildableIdentifier = "primary"
-            BlueprintIdentifier = "______Target_SynchronousProcess"
-            BuildableName = "SynchronousProcess.framework"
-            BlueprintName = "SynchronousProcess"
-            ReferencedContainer = "container:SynchronousProcess.xcodeproj">
-         </BuildableReference>
-      </MacroExpansion>
       <AdditionalOptions>
       </AdditionalOptions>
    </TestAction>
@@ -64,7 +55,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "______Target_SynchronousProcess"
+            BlueprintIdentifier = "OBJ_17"
             BuildableName = "SynchronousProcess.framework"
             BlueprintName = "SynchronousProcess"
             ReferencedContainer = "container:SynchronousProcess.xcodeproj">
@@ -79,15 +70,6 @@
       savedToolIdentifier = ""
       useCustomWorkingDirectory = "NO"
       debugDocumentVersioning = "YES">
-      <MacroExpansion>
-         <BuildableReference
-            BuildableIdentifier = "primary"
-            BlueprintIdentifier = "______Target_SynchronousProcess"
-            BuildableName = "SynchronousProcess.framework"
-            BlueprintName = "SynchronousProcess"
-            ReferencedContainer = "container:SynchronousProcess.xcodeproj">
-         </BuildableReference>
-      </MacroExpansion>
    </ProfileAction>
    <AnalyzeAction
       buildConfiguration = "Debug">

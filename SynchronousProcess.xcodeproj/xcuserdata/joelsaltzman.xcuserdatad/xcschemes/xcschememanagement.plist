@@ -4,10 +4,10 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>ExternalBuild.xcscheme</key>
+		<key>LinuxBuild.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>1</integer>
+			<integer>2</integer>
 		</dict>
 		<key>SynchronousProcess.xcscheme_^#shared#^_</key>
 		<dict>
@@ -17,7 +17,27 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>3859E08E1E0BB66300D85D01</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>388A2FE31D66925700EB2046</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>389BAB6C1E07584C00DE44DE</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>OBJ_17</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>OBJ_25</key>
 		<dict>
 			<key>primary</key>
 			<true/>

@@ -7,14 +7,38 @@
 //
 //TODO: add async fileHandle reading that makes the run loop run until it's done. maybe use a separate struct for it?
 
-
 import Foundation
+
+#if os(Linux)
+    public typealias Process = Task
+
+    
+    
+    extension Task {
+        var isRunning : Bool {
+            get {
+                return self.running
+            }
+        }
+    }
+    
+    
+    extension NotificationCenter {
+        open func addObserver(forName name: NSNotification.Name?, object obj: Any?, queue: OperationQueue?, using block: @escaping (Notification) -> Swift.Void) -> NSObjectProtocol{
+            return addObserver(forName: name, object: obj, queue: queue, usingBlock: block)
+        }
+    }
+    extension FileHandle {
+        public static let readCompletionNotification = Notification.Name.init(rawValue: "NSFileHandleReadCompletionNotification")
+    }
+    
+#endif 
 
 public typealias ProcessResult = (output:String?, error:String?, exitCode:Int32)
 
 
 
-extension Process {
+extension Process: ProcessRunnable {
     
     @discardableResult
     public static func run(_ launchPath:String, arguments:[String]?, silenceOutput:Bool = false) -> ProcessResult {
@@ -66,8 +90,8 @@ extension Process {
                 }
             }
         }
-        NotificationCenter.default.addObserver(forName: FileHandle.readCompletionNotification, object: outputPipe.fileHandleForReading, queue: OperationQueue.main, using: readHandler)
-        NotificationCenter.default.addObserver(forName: FileHandle.readCompletionNotification, object: errorPipe.fileHandleForReading, queue: OperationQueue.main, using: readHandler)
+        _ = NotificationCenter.default.addObserver(forName: FileHandle.readCompletionNotification, object: outputPipe.fileHandleForReading, queue: OperationQueue.main, using: readHandler)
+        _ = NotificationCenter.default.addObserver(forName: FileHandle.readCompletionNotification, object: errorPipe.fileHandleForReading, queue: OperationQueue.main, using: readHandler)
         
         self.launch()
         
