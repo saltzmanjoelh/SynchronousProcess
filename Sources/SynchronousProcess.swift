@@ -11,7 +11,7 @@ import Foundation
 
 #if os(Linux)
     public typealias Process = Task
-
+    
     
     
     extension Task {
@@ -32,7 +32,7 @@ import Foundation
         public static let readCompletionNotification = Notification.Name.init(rawValue: "NSFileHandleReadCompletionNotification")
     }
     
-#endif 
+#endif
 
 public typealias ProcessResult = (output:String?, error:String?, exitCode:Int32)
 
@@ -41,16 +41,16 @@ public typealias ProcessResult = (output:String?, error:String?, exitCode:Int32)
 extension Process: ProcessRunnable {
     
     @discardableResult
-    public static func run(_ launchPath:String, arguments:[String]?, silenceOutput:Bool = false) -> ProcessResult {
+    public static func run(_ launchPath: String, arguments: [String]?, printOutput: Bool = true, outputPrefix: String? = nil) -> ProcessResult {
         let process = Process()
         process.launchPath = launchPath
         if let launchArguments = arguments {
             process.arguments = launchArguments
         }
-        return process.run(silenceOutput)
+        return process.run(printOutput, outputPrefix: outputPrefix)
     }
     @discardableResult
-    public func run(_ silenceOutput:Bool = false) -> ProcessResult {
+    public func run(_ printOutput: Bool = true, outputPrefix: String? = nil) -> ProcessResult {
         
         
         let outputPipe = Pipe()
@@ -62,15 +62,17 @@ extension Process: ProcessRunnable {
         
         var output = String()
         var error = String()
+        let prefix = outputPrefix != nil ? "\(outputPrefix!): " : ""
         
         let dataTransformer : (Data) -> (String?) = {
             data in
             if data.count == 0 {
                 self.terminate()
+                return nil
             }
             if let string = String(data:data, encoding:String.Encoding.utf8) {
-                if(!silenceOutput){
-                    print("\(string)")
+                if(printOutput){
+                    print("\(prefix)\(string.trimmingCharacters(in: CharacterSet.whitespaces))")
                 }
                 return string
             }
@@ -84,9 +86,9 @@ extension Process: ProcessRunnable {
                     return
                 }
                 if fileHandle == outputPipe.fileHandleForReading {
-                    output += readString
+                    output += "\(prefix)\(readString)"
                 }else {
-                    error += readString
+                    error += "\(prefix)\(readString)"
                 }
             }
         }

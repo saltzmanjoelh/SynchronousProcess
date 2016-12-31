@@ -9,5 +9,6 @@
 import Foundation
 
 public protocol ProcessRunnable {
-    static func run(_ launchPath: String, arguments: [String]?, silenceOutput: Bool) -> ProcessResult 
+    static func run(_ launchPath: String, arguments: [String]?, printOutput: Bool, outputPrefix: String?) -> ProcessResult
+    func run(_ printOutput: Bool, outputPrefix: String?) -> ProcessResult
 }
