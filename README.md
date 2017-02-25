@@ -19,5 +19,5 @@ if let error = result.error {
 [1]:	https://travis-ci.org/saltzmanjoelh/SynchronousProcess
 [2]:	https://swift.org "Swift"
 
-[image-1]:	https://travis-ci.org/saltzmanjoelh/SynchronousProcess
+[image-1]:	https://travis-ci.org/saltzmanjoelh/SynchronousProcess.svg?branch=master
 [image-2]:	https://img.shields.io/badge/swift-version%203-blue.svg
